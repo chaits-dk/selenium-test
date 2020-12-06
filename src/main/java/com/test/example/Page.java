@@ -13,10 +13,12 @@ public class Page {
     private final WebDriver driver;
     private final String url;
 
+
     // constructor
     public Page(WebDriver driver, String url) {
         this.driver = driver;
         this.url = url;
+
     }
 
     public void open() {
@@ -31,6 +33,10 @@ public class Page {
         driver.findElement(By.name(identifier)).click();
     }
 
+    public void clicklink(String identifier){ driver.findElement(By.linkText(identifier)).click();}
+
+    public void checkbox(String identifier){ driver.findElement(By.id(identifier)).click();}
+
 
     public boolean isElementPresentById(String identifier) {
         return driver.findElement(By.id(identifier)).isDisplayed();
@@ -41,6 +47,9 @@ public class Page {
         return driver.findElement(By.name(identifier)).isDisplayed();
     }
 
+    public void close() {
+        driver.close();
+    }
 }
 
 

@@ -50,13 +50,15 @@ public class LostPasswordTest {
    @Test
     public void testRedirectToLoginPage(){
         page.clicklink("Log in");
-        System.out.println(driver.getCurrentUrl());
+        //System.out.println(driver.getCurrentUrl());
+       assertEquals("https://s1.demo.opensourcecms.com/wordpress/wp-login.php",driver.getCurrentUrl());
    }
     // Test if the link redirects to Opensourcelink
    @Test
     public void testBackToOpensourcecmslink(){
         page.clicklink("← Back to opensourcecms");
-        System.out.println(driver.getCurrentUrl());
+        //System.out.println(driver.getCurrentUrl());
+       assertEquals("https://s1.demo.opensourcecms.com/wordpress/",driver.getCurrentUrl());
    }
    @After
     public void teardown(){

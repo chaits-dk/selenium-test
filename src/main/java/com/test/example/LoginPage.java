@@ -16,8 +16,6 @@ public class LoginPage extends Page {
     public LoginPage(WebDriver driver, String url) {
         super(driver, url);
 
-
-
     }
 
     public void login(String username, String password) {

@@ -10,6 +10,8 @@ public class LostPasswordPage extends Page {
     private final static String GET_NEW_PASSWORD_ID = "wp-submit";
     private final static String REDIRECT_LOGIN_PAGE = "Log in";
     private final static String BACK_TO_OPENSOURCESCM = "← Back to opensourcecms";
+    private final static String ERROR_MESSAGE = "login_error";
+
 
     public LostPasswordPage(WebDriver driver, String url) {
         super(driver, url);
@@ -25,8 +27,12 @@ public class LostPasswordPage extends Page {
         clicklink(REDIRECT_LOGIN_PAGE);
     }
 
-    public void redirectBackToSchwurbelshop(){
+    public void redirectBackToOpensourcecsm(){
         clicklink(BACK_TO_OPENSOURCESCM);
+    }
+
+    public String displayErrorMessage(){
+        return getText(ERROR_MESSAGE);
     }
 
     //helper function for unit testing

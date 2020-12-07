@@ -13,7 +13,7 @@ git clone https://github.com/chaits-dk/selenium-test.git
 
 cd selenium-test
 
-bash webdriver.gecko.driver", "/usr/local/bin/geckodriver"
+bash gecko-installer.sh
 
 mvn clean package
 
